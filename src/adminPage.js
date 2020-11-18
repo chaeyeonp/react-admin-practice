@@ -5,18 +5,15 @@ import { UserList } from './users';
 import jsonServerProvider from 'ra-data-json-server';
 import Dashboard from './Dashboard';
 import authProvider from './authProvider';
-import {testDataShow} from './testData';
 
 const httpClient = (url, options = {}) => {
     if (!options.headers) {
 
         options.headers = new Headers({ Accept: 'application/json' });
 
-        options.headers.set('Access-Control-Expose-Headers','X-Total-Count');
-
     }
-    // add your own headers here
-
+    //추가 헤더 설정
+    options.headers.set('Access-Control-Expose-Headers','X-Total-Count');
 
     return fetchUtils.fetchJson(url, options);
 }
@@ -26,7 +23,6 @@ export const adminPage = () => (
     <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} create = {PostCreate} />
         <Resource name="users" list={UserList} />
-        <Resource name="testData" list={testDataShow}/>
     </Admin>
 )
 
