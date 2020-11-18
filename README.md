@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 🛠 React Admin Practice
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Node.js(Express)와 MySQL 연동한 "https://github.com/chaeyeonp/node_admin" 과 react-admin 연동
 
-## Available Scripts
 
-In the project directory, you can run:
+### 실행 방법
 
-### `npm start`
+```
+git clone "https://github.com/chaeyeonp/react-admin-practice"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+cd admin
 
-### `npm test`
+node admin.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd ..
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📝 사용언어, 기술스택
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Generic badge](https://img.shields.io/badge/framework-tensorflow/React-green.svg)
+![Generic badge](https://img.shields.io/badge/engine-node.js-green.svg)
+![Generic badge](https://img.shields.io/badge/database-MySQL-yellow.svg)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br><br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📕 세부 기술
+| 기술 | 버전 | 설명 |
+| -------- | ---- | ---- |
+| ESLint | ![Generic badge](https://img.shields.io/badge/release-6.14.8-blue.svg) | ECMAScript 코드에서 문제점 검사 또는 더 나은 코드로 정정하는 린트 도구 |
+| Node.js Express | ![Generic badge](https://img.shields.io/badge/release-6.14.8-blue.svg) | ECMAScript 코드에서 문제점 검사 또는 더 나은 코드로 정정하는 린트 도구 |
+| React-Admin | ![Generic badge](https://img.shields.io/badge/release-6.14.8-blue.svg) | ECMAScript 코드에서 문제점 검사 또는 더 나은 코드로 정정하는 린트 도구 |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎛 Mysql DB Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="1047" alt="mysqldb" src="https://user-images.githubusercontent.com/61309080/98805792-7cd6ae00-245b-11eb-95d0-63e2eb121ef9.png">
 
-### Code Splitting
+```
+CREATE SCHEMA admin;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+GO
 
-### Analyzing the Bundle Size
+CREATE TABLE mboard
+(
+    date    date        not null,
+    student varchar(50) not null,
+    mask    varchar(30) not null,
+    count   int         not null,
+    id      int auto_increment
+        primary key
+);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## 🔐 최종 결과 화면
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="1440" alt="userpage" src="https://user-images.githubusercontent.com/61309080/99478724-44bdf680-2998-11eb-99ef-d2789d52b24d.png">
