@@ -6,6 +6,8 @@ Node.js(Express)와 MySQL 연동한 "https://github.com/chaeyeonp/node_admin" �
 ### 실행 방법
 
 ```
+<terminal 1>
+
 git clone "https://github.com/chaeyeonp/react-admin-practice"
 
 npm install
@@ -14,7 +16,7 @@ cd admin
 
 node admin.js
 
-cd ..
+<terminal 2>
 
 npm start
 
